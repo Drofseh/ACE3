@@ -57,3 +57,13 @@
     {[QGVAR(probabilityCoef), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(alwaysKillAfterCookoff), "CHECKBOX",
+    [LSTRING(alwaysKillAfterCookoff_name), LSTRING(alwaysKillAfterCookoff_tooltip)],
+    LSTRING(category_displayName),
+    true, // default value
+    true, // isGlobal
+    {[QGVAR(alwaysKillAfterCookoff), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    false // Needs mission restart
+] call CBA_fnc_addSetting;

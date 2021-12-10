@@ -176,5 +176,11 @@
             <German>Ob Fahrzeuge in Brand gesetzt werden, während deren Munition durchzündet.</German>
             <Polish>Określa, czy pojazdy zapalą się podczas samozapłonu ich amunicji.</Polish>
         </Key>
+        <Key ID="STR_ACE_CookOff_alwaysKillAfterCookoff_name">
+            <English>Always Kill Vehicle After Cookoff</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_alwaysKillAfterCookoff_tooltip">
+            <English>Whether or not vehicles will always be destroyed after cooking off. Depending on the cookoff the vehicle may explode, or may simply be killed without effects.</English>
+        </Key>
     </Package>
 </Project>
