@@ -20,3 +20,6 @@
 #define INTERVAL 0.20
 #define MAXVIRTUALG 5.0
 #define MINVIRTUALG 2.5
+
+#define G_COEF_PILOT 0.55
+#define G_COEF_UNTRAINED 1
