@@ -60,8 +60,7 @@ if (_count > 0) then {
     _average = _average / _count;
 };
 
-private _classCoef = (ACE_player getVariable ["ACE_GForceCoef",
-    getNumber ((configOf ACE_player) >> "ACE_GForceCoef")]) max 0.001;
+private _classCoef = (ACE_player getVariable ["ACE_GForceCoef", getNumber ((configOf ACE_player) >> "ACE_GForceCoef")]) max 0.001;
 private _suitCoef = if ((uniform ACE_player) != "") then {
     (getNumber (configFile >> "CfgWeapons" >> (uniform ACE_player) >> "ACE_GForceCoef")) max 0.001
 } else {
