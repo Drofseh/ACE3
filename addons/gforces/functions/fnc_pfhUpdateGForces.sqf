@@ -61,8 +61,15 @@ if (_count > 0) then {
 };
 
 private _classCoef = (ACE_player getVariable ["ACE_GForceCoef", getNumber ((configOf ACE_player) >> "ACE_GForceCoef")]) max 0.001;
-private _suitCoef = if ((uniform ACE_player) != "") then {
-    (getNumber (configFile >> "CfgWeapons" >> (uniform ACE_player) >> "ACE_GForceCoef")) max 0.001
+private _uniform = uniform ACE_player;
+private _suitCoef = if ((_uniform) != "") then {
+    private _result = 1;
+    if (_uniform != (ACE_player getVariable ["ACE_GForceUniform", uniform ACE_player])) then {
+        _result = (getNumber (configFile >> "CfgWeapons" >> (uniform ACE_player) >> "ACE_GForceCoef")) max 0.001
+    } else {
+        _result = ACE_player getVariable ["ACE_GForceUniformCoef", (getNumber (configFile >> "CfgWeapons" >> (uniform ACE_player) >> "ACE_GForceCoef")) max 0.001];
+    };
+    _result
 } else {
     1
 };
